@@ -1,5 +1,4 @@
 {% extends 'base.html' %} {% block content %}
-
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -14,7 +13,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="../images/dublin-city.webp" width="100%">
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -35,10 +34,6 @@
                 <div class="row">
 
                     <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
-                    </div>
-                    <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
@@ -55,6 +50,13 @@
                         <!-- The number of likes goes before the closing strong tag -->
                         <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
+                    </div>
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            {{ total_comments }}</strong>
+                        {% endwith %}
                     </div>
                 </div>
             </div>
@@ -89,7 +91,7 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- user authentication part -->
+                <!-- For later -->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval

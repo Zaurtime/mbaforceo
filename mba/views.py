@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 
-#My views is here
+#My views is here 
 
 
 class PostList(generic.ListView):
