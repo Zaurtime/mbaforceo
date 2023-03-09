@@ -40,7 +40,8 @@ def post(self, request, slug, *args, **kwargs):
     if post.likes.filter(id=self.request.user.id).exists():
         liked = True
     
-    
+    comment_form = CommentForm(data=request.POST)
+
     return render(
         request,
         "post_detail.html",
@@ -50,3 +51,4 @@ def post(self, request, slug, *args, **kwargs):
             "liked": liked,
             "comment_form": CommentForm()
             },
+    )
