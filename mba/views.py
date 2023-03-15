@@ -5,6 +5,7 @@ from .models import Post
 from .forms import CommentForm
 from .forms import PostForm
 
+
 #My views is here 
 
 
@@ -39,11 +40,20 @@ class PostDetail(View):
     def addProduct(request):
         form = PostForm()
 
+        if request.method == 'POST':
+            form = PostForm(request.POST, request.FILES)
+            if form.is_valid():
+               form.save()
+               return redirect('home')
+        else:
+            form = PostForm()
+
         context = {
-            "form":form
-        }    
+        "form":form
+        }
 
         return render(request, 'addProduct.html', context)
+
 
 
     def post(self, request, slug, *args, **kwargs):
