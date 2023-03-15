@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from .forms import PostForm
 
 #My views is here 
 
@@ -35,7 +36,16 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+    def addProduct(request):
+        form = PostForm()
+
+        context = {
+            "form":form
+        }    
+
+        return render(request, 'addProduct.html', context)
+
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
