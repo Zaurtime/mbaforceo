@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 from .forms import PostForm
+from django.contrib.auth.decorators import login_required
 
 
 #My views is here 
@@ -37,24 +38,6 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    def addProduct(request):
-        form = PostForm()
-
-        if request.method == 'POST':
-            form = PostForm(request.POST, request.FILES)
-            if form.is_valid():
-               form.save()
-               return redirect('home')
-        else:
-            form = PostForm()
-
-        context = {
-        "form":form
-        }
-
-        return render(request, 'addProduct.html', context)
-
-
 
     def post(self, request, slug, *args, **kwargs):
 
@@ -98,3 +81,22 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+@login_required(login_url='home')
+def addProduct(request):
+    form = PostForm()
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = PostForm()
+
+    context = {
+        "form": form
+    }
+
+    return render(request, 'add_product.html', context)

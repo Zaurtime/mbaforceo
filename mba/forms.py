@@ -14,8 +14,8 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['featured_image', 'title', 'content', ]
         widgets = {
-           'featured_image' : forms.FileInput(attrs={'class': 'form-control'}),
-           'title' : forms.TextInput(attrs={'class': 'form-control'}),
-           'content' : forms.TextInput(attrs={'class': 'form-control'}),
+           'featured_image': forms.FileInput(attrs={'class': 'form-control'}),
+           'title': forms.TextInput(attrs={'class': 'form-control'}),
+           'content': forms.TextInput(attrs={'class': 'form-control'}),
         }
       
