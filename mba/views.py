@@ -99,3 +99,16 @@ def add_product(request):
         'form': form
     }
     return render(request, 'add_product.html', context)
+
+
+@login_required()
+def delete_product(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    if request.method == 'POST':
+        post.delete()
+        messages.info(request, "The post have been deleted")
+        return redirect('home')
+    context = {
+        'post': post,
+    }
+    return render(request, 'delete_product.html', context)   
