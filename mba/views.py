@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
-
+from django.contrib import messages
 
 #My views is here 
 
@@ -83,20 +83,19 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-@login_required(login_url='home')
-def addProduct(request):
-    form = PostForm()
-
-    if request.method == 'POST':
+@login_required()
+def add_product(request):
+    if request.method == "POST":
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            instance = form.save(commit=False)
+            instance.author = request.user
+            instance.save()
+            messages.info(request, "The post have been created")
             return redirect('home')
     else:
         form = PostForm()
-
     context = {
-        "form": form
+        'form': form
     }
-
     return render(request, 'add_product.html', context)
