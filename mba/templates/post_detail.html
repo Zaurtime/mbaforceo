@@ -51,12 +51,19 @@
                         <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
+
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         {% endwith %}
+                    </div>
+                    <div>
+                        {% if post.author == request.user %}
+                        
+                        <a href="{% url 'product_delete' post.slug %}"><button type="button" class="btn btn-outline-danger text-font">Delete Post</button></a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
