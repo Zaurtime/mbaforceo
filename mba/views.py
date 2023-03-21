@@ -112,3 +112,21 @@ def delete_product(request, slug):
         'post': post,
     }
     return render(request, 'delete_product.html', context)   
+
+
+@login_required()
+def update_product(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    if request.method == 'POST':
+        form = PostUpdateForm(request.POST, request.FILES, isinstance=post)
+        if form.is_valid():
+           form.save()
+        messages.info(request, "The post have been updated")
+        return redirect('home')
+    else:
+        form = PostUpdateForm(isinstance=post)
+    context = {
+        'post': post,
+        'form' : form
+    }
+    return render(request, 'update_product.html', context)
