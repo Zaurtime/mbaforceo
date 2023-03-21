@@ -61,10 +61,12 @@
                     </div>
                     <div>
                         {% if post.author == request.user %}
-                        
-                        <a href="{% url 'product_delete' post.slug %}"><button type="button" class="btn btn-outline-danger text-font">Delete Post</button></a>
+                        <a href="{% url 'post_update' post.slug %}"><button type="button" class="btn btn-outline-primary text-font">Update Post</button></a>
+                        <a href="{% url 'post_delete' post.slug %}"><button type="button" class="btn btn-outline-danger text-font">Delete Post</button></a>
                         {% endif %}
                     </div>
+            
+
                 </div>
             </div>
         </div>

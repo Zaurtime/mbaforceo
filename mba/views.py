@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, UpdateForm
 from .forms import PostForm
+from .forms import UpdateForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
@@ -118,15 +119,15 @@ def delete_product(request, slug):
 def update_product(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
     if request.method == 'POST':
-        form = PostUpdateForm(request.POST, request.FILES, isinstance=post)
+        form = UpdateForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
-           form.save()
-        messages.info(request, "The post have been updated")
-        return redirect('home')
+            form.save()
+            messages.info(request, "The post have been updated")
+            return redirect('home')
     else:
-        form = PostUpdateForm(isinstance=post)
+        form = UpdateForm(instance=post)
     context = {
         'post': post,
-        'form' : form
+        'form': form
     }
     return render(request, 'update_product.html', context)
