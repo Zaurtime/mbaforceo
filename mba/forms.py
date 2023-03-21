@@ -18,4 +18,10 @@ class PostForm(forms.ModelForm):
            'title': forms.TextInput(attrs={'class': 'form-control'}),
            'content': forms.TextInput(attrs={'class': 'form-control'}),
         }
+
+
+class UpdateForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['featured_image', 'title', 'content', ]
       
