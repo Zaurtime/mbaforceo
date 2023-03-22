@@ -29,7 +29,19 @@ class UpdateForm(forms.ModelForm):
 
 
 class SignUpForm(UserCreationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["username"].widget.attrs.update({
+            'required': '',
+            'name': 'username',
+            'type': 'text',
+            'class': 'form-input',
+            'placeholder': 'mba for ceo',
+            'maxlength': '16',
+            'minlength': '6'
+        })
+
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'pasword2',]
+        fields = ['username', 'email', 'password1', 'password2',]
       

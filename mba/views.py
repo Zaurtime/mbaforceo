@@ -2,9 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm, UpdateForm, PostForm
+from .forms import CommentForm, UpdateForm, PostForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+
 
 #My views is here 
 
@@ -129,3 +130,24 @@ def update_product(request, slug):
         'form': form
     }
     return render(request, 'update_product.html', context)
+
+
+def signup(request):
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password1")
+            form.save()
+            new_user = authenticate(username=username, password=password)
+            if new_user is not None:
+                login(request, new_user)
+                return redirect("home")
+   
+   
+    form = SignUpForm()
+
+    context = {
+     "form": form
+    }
+    return render(request, "signup.html", context)
