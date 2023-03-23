@@ -28,7 +28,7 @@ class UpdateForm(forms.ModelForm):
         fields = ['featured_image', 'title', 'content', ]
 
 
-class SignUpForm(UserCreationForm):
+class CreateUserForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["username"].widget.attrs.update({
@@ -43,5 +43,5 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2',]
+        fields = ['username', 'password1', 'password2',]
       

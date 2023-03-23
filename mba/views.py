@@ -2,12 +2,16 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm, UpdateForm, PostForm, UserCreationForm
+from .forms import CommentForm, UpdateForm, PostForm, CreateUserForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 
 
 #My views is here 
+from .models import *
+from .forms import CreateUserForm
 
 
 class PostList(generic.ListView):
@@ -133,8 +137,10 @@ def update_product(request, slug):
 
 
 def signup(request):
+    form = CreateUserForm()
+
     if request.method == "POST":
-        form = SignUpForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password1")
@@ -144,10 +150,7 @@ def signup(request):
                 login(request, new_user)
                 return redirect("home")
    
-   
-    form = SignUpForm()
-
     context = {
      "form": form
     }
-    return render(request, "signup.html", context)
+    return render(request, "accounts/signup.html", context)
