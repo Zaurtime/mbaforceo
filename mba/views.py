@@ -154,3 +154,7 @@ def signup(request):
      "form": form
     }
     return render(request, "accounts/signup.html", context)
+
+
+def about(request):
+    return render(request, 'about.html')
