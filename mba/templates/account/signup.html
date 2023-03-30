@@ -4,28 +4,34 @@
 {% load i18n %}
 
 {% block head_title %}
-{% endblock %}
+
 
 {% block content %}
 {% trans "Sign Up" %}
 
 
+<div class="contain forms-view">
+  <div class="row m-4 justify-content-md-center">
+    <div class="col-md-6 m-4 text-center form-box">
+    
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+    <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
-<form class="login-form spacer" id="signup-form" method="POST" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
+    <form class="login-form spacer" id="signup-form" method="POST" action="{% url 'account_signup' %}">
+     {% csrf_token %}
+     {{ form.as_p }}
 
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+     {% endif %}
+     <button type="submit">{% trans "Sign Up" %} &raquo;</button>
 
-  <div class="input-group">
-    <img class="icon input-icon" src="{% static 'icons/key.svg' % }" alt="">
-    {{form.email}}
+     <div class="input-group">
+      <img class="icon input-icon" src="{% static 'icons/key.svg' % }" alt="">
+      {{form.email}}
+     </div>
+
+    </form>
+   </div>
   </div>
-
-</form>
-
+</div>
 {% endblock %}
