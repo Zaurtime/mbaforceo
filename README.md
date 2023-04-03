@@ -45,4 +45,7 @@ on the add product or add course for student and upload or update their product 
 7. Delete user's favourite MBA courses that was posted previously.
 8. Change the website permissions for a user.
 
+### Agile Methodology
 
+All functionality and development of this project were managed using GitHub which Projects can be found
+[here](https://github.com/Zaurtime/mbaforceo/issues)
