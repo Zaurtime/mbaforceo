@@ -86,14 +86,14 @@ website. It also details the main purpose and the goal of the MBA for leaders wo
 
 ### Home Page
 
-![Home Page]()
+![Home Page](./images/Home2next.png)
 
 * On the Home Page, users have access to the MBA posts available on the website.
 The user can choose to see the MBA course detail by clicking on the post card.<br>
 
 ### Post Detail Page - Top
 
-![Post Detail Page - Top](.)
+![Post Detail Page - Top](./images/OpenPost.png)
 
 * At the top of the Post Details Page, users can see the post's main
 image and they can also have access to information about the post. The
@@ -106,38 +106,37 @@ comments the post has received.<br>
 ![Post Detail Page - Steps](.)
 
 * In this page section, users can read the MBA for CEO main post.<br>
-* On this page, users are allowed to comment, delete and update their own post . The website superuser can 
-  delete or update any comments on the blog without having to access the admin panel.
+* On this page, users are allowed to comment, delete and update their own post . The website superuser can delete or update any comments on the blog without having to access the admin panel.
 
 ### Post Detail Page - Comments
 
-![Post Detail Page - Comments](.)
+![Post Detail Page - Comments](./images/LeaveComment.png)
 
 * At the bottom of this page right side, users can leave comments and left side read the comments posted by other users. If the user is logged in or is a 
 superuser they have access to the buttons for deleting or updating comments.
 
 ### Add product Page
 
-![Add product Page](.)
+![Add product Page](./images/addProduct.png)
 
 * On this page, registered users can fill out the form to add or edit a post with their favourite MBA programm and main creator will be famous universities marketing team.
 
 ### Signup Page
 
-![Signup Page](.)
+![Signup Page](./images/signup.png)
 
 * On the Signup Page, a new user can sign up for the MBA for CEO website by filling out and then submitting the form.
 
 ### Login Page
 
-![Login Page](.)
+![Login Page](./images/SignIn.png)
 
 * On the Login Page, users can log in to the website by inputting the username and password and have access 
   to website services for a user registered.
 
 ### Logout Page
 
-![Logout Page](.)
+![Logout Page](./images/SignOutSure.png)
 
 * On the Logout Page, users can confirm that they wish to exit the website.
 
