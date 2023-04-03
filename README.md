@@ -49,3 +49,13 @@ on the add product or add course for student and upload or update their product 
 
 All functionality and development of this project were managed using GitHub which Projects can be found
 [here](https://github.com/Zaurtime/mbaforceo/issues)
+
+### The Scope
+
+#### Main Site Goals
+
+* To provide users with a good experience when using the MBA for CEO website.
+* To provide users with a visually pleasing website that is intuitive to use and easy to navigate.
+* To provide a website with a clear purpose.
+* To provide role-based permissions that allows user to interact with the website.
+* To provide tools that allow users to add products.
