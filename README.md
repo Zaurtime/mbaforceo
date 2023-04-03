@@ -122,5 +122,23 @@ superuser they have access to the buttons for deleting or updating comments.
 
 * On this page, registered users can fill out the form to add or edit a post with their favourite MBA programm and main creator will be famous universities marketing team.
 
+### Signup Page
+
+![Signup Page](.)
+
+* On the Signup Page, a new user can sign up for the MBA for CEO website by filling out and then submitting the form.
+
+### Login Page
+
+![Login Page](.)
+
+* On the Login Page, users can log in to the website by inputting the username and password and have access 
+  to website services for a user registered.
+
+### Logout Page
+
+![Logout Page](.)
+
+* On the Logout Page, users can confirm that they wish to exit the website.
 
 
