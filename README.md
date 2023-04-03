@@ -64,3 +64,16 @@ All functionality and development of this project were managed using GitHub whic
 
 * All the imagery is related to the MBA courses and website design.
 The remaining imagery will be uploaded by the author to the database.
+
+## Database Diagram
+
+![Database Diagrama]()<br>
+
+## Features
+
+### Home Page
+
+![Home Page]
+
+* The hero image welcomes the user with an advertising to create course for Student if our clients University or Business School and same time those interested customers can read posts what the website is about.<br>
+
