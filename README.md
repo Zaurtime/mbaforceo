@@ -59,3 +59,8 @@ All functionality and development of this project were managed using GitHub whic
 * To provide a website with a clear purpose.
 * To provide role-based permissions that allows user to interact with the website.
 * To provide tools that allow users to add products.
+
+#### Imagery
+
+* All the imagery is related to the MBA courses and website design.
+The remaining imagery will be uploaded by the author to the database.
