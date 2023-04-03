@@ -153,7 +153,7 @@ def signup(request):
     context = {
      "form": form
     }
-    return render(request, "accounts/signup.html", context)
+    return render(request, "account/signup.html", context)
 
 
 def about(request):
