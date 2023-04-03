@@ -123,7 +123,7 @@ superuser they have access to the buttons for deleting or updating comments.
 
 ### Signup Page
 
-![Signup Page](./images/signup.png)
+![Signup Page](./images/register.png)
 
 * On the Signup Page, a new user can sign up for the MBA for CEO website by filling out and then submitting the form.
 
