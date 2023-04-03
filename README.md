@@ -73,7 +73,54 @@ The remaining imagery will be uploaded by the author to the database.
 
 ### Home Page
 
-![Home Page]
+![Home Page]()
 
 * The hero image welcomes the user with an advertising to create course for Student if our clients University or Business School and same time those interested customers can read posts what the website is about.<br>
+
+### About Page
+
+![About Page](.)
+
+* The About Page gives, users information about the MBA for CEO website. It introduces the users to the
+website. It also details the main purpose and the goal of the MBA for leaders worldwide.<br>
+
+### Home Page
+
+![Home Page]()
+
+* On the Home Page, users have access to the MBA posts available on the website.
+The user can choose to see the MBA course detail by clicking on the post card.<br>
+
+### Post Detail Page - Top
+
+![Post Detail Page - Top](.)
+
+* At the top of the Post Details Page, users can see the post's main
+image and they can also have access to information about the post. The
+post information includes MBA name,author name, posted date and the
+option to like/unlike the post. It will also show how many likes and
+comments the post has received.<br>
+
+### Post Detail Page - Steps
+
+![Post Detail Page - Steps](.)
+
+* In this page section, users can read the MBA for CEO main post.<br>
+* On this page, users are allowed to comment, delete and update their own post . The website superuser can 
+  delete or update any comments on the blog without having to access the admin panel.
+
+### Post Detail Page - Comments
+
+![Post Detail Page - Comments](.)
+
+* At the bottom of this page right side, users can leave comments and left side read the comments posted by other users. If the user is logged in or is a 
+superuser they have access to the buttons for deleting or updating comments.
+
+### Add product Page
+
+![Add product Page](.)
+
+* On this page, registered users can fill out the form to add or edit a post with their favourite MBA programm and main creator will be famous universities marketing team.
+
+
 
