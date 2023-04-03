@@ -73,13 +73,13 @@ The remaining imagery will be uploaded by the author to the database.
 
 ### Home Page
 
-![Home Page]()
+![Home Page](./images/Home.png)
 
 * The hero image welcomes the user with an advertising to create course for Student if our clients University or Business School and same time those interested customers can read posts what the website is about.<br>
 
 ### About Page
 
-![About Page](.)
+![About Page](./images/aboutUs.png)
 
 * The About Page gives, users information about the MBA for CEO website. It introduces the users to the
 website. It also details the main purpose and the goal of the MBA for leaders worldwide.<br>
