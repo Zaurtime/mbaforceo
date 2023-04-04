@@ -142,50 +142,66 @@ superuser they have access to the buttons for deleting or updating comments.
 
 ### Like Post
 
-![Like Post](.)
+![Like Post](./images/UpdatePost.png)
 * When users are logged in to the website they can like a post <br>
 
 ### Unlike Post
 
-![Unlike Post](.)
+![Unlike Post](./images/homePrev.png)
 
 * When users are logged in to the website they can unlike a post that has been liked by the user.<br>
 
+### Leave Comment 
+
+![Leave Comment](./images/LeaveComment.png)
+
+* When users are logged in to the website they can comment on a post.<br>
+
 ### Comment Post
 
-![Comment Post](.)
+![Comment Post](./images/commentApproval.png)
 
 * When users are logged in to the website they can comment on a post and after they submit the comment they will see a 
   message at the top of the page saying "Your comment is awaiting approval".<br>
 
 ### Add MBA course
 
-![Add MBA course](.)  
+![Add MBA course](./images/postCreated.png)  
 
 * When users are logged in to the website they can publish a post with a favourite MBA program and after they submit the 
 post they will see a message at the top of the page saying "Your post have been created".<br>
 
 ### Update Post
 
-![Update Post](.)  
+![Update Post](./images/updatedPost.png)  
 * When users are logged in to the website they can edit their own previously published posts and they will see the message 
   "The post have been updated" after pressing the Submit button.<br>
 
 ### Delete Post 1 
 
-![Delete Post 1](.)
+![Delete Post 1](./images/DeleteCourse.png)
 When users are logged in to the website and they wish to delete their posts, they can press the button Delete and a 
 Bootstrap box model will pop up with the message Delete Course Post "Are you sure you want to delete this post?".<br>  
 
 ### Delete Post 2 2
 
-![Delete Post 2](.)  
+![Delete Post 2](./images/deletedPostNow.png)  
 
 * After pressing the Delete button again inside the Bootstrap box model they will see a message on the 
   top of the page, "The Post have been deleted".<br>
 
+### Logo
+
+![Logo](./images/CEO.png)
+* When users click on logo they will redirect to home page <br>
+
+### Footer
+
+![Footer](./images/footer.png)
+* When users are at the bottom of the page they can see footer<br>
+
 ## Admin Panel/Superuser
-![Superuser](.)
+![Superuser](./images/superadmin.png)
 
 * On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and
 delete the following ones:
@@ -194,7 +210,7 @@ delete the following ones:
 3. Author
 5. Likes
 
-   
+
 *As admin/superuser I can also approve comments, approve posts and change the status and give other permissions to the users.<br>
 
 ## Technologies Used
