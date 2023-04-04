@@ -213,6 +213,47 @@ delete the following ones:
 
 *As admin/superuser I can also approve comments, approve posts and change the status and give other permissions to the users.<br>
 
+
+## Testing
+
+### W3C HTML Validator results
+
+![W3C - HTML](./images/htmlValidator.png)
+* Checking completed.No Error Found or warnings to show <br>
+
+### W3C CSS Validator results
+
+![W3C - CSS](./images/cssValidator.png)
+* Checking completed.No Error Found <br>
+
+### PEP8 tests
+
+![Model](./images/pip8modelTest.png)
+* All clear.No Error Found <br>
+
+![Forms](./images/pip8formTest.png)
+* All clear.No Error Found <br>
+
+![Settings](./images/pip8Setting.png)
+* All clear.No Error Found.Only minor warnings line too long <br>
+
+![Views](./images/pip8modelTest.png)
+* All clear.No Error Found <br>
+
+![UrlsMbaforCEO](./images/urlPip8.png)
+* All clear.No Error Found <br>
+
+![UrlsMba](./images/url2MbaPip8Test.png)
+* All clear.No Error Found <br>
+
+### Lighthouse results
+
+![Lighthouse Desktop](./images/Lighthouse%20Performance.png)
+* Better than good overall Performance 97<br>
+
+![Lighthouse Mobile](.)
+* Better than good <br>
+
 ## Technologies Used
 
 ### Languages Used

@@ -9,7 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 
 
-#My views is here 
+# My views is here
 from .models import *
 from .forms import CreateUserForm
 
@@ -22,7 +22,6 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
-
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -30,7 +29,6 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-
         return render(
             request,
             "post_detail.html",
@@ -39,19 +37,17 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
             },
         )
 
     def post(self, request, slug, *args, **kwargs):
-
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
@@ -61,7 +57,6 @@ class PostDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
-
         return render(
             request,
             "post_detail.html",
@@ -70,21 +65,19 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
+                "liked": liked,
             },
         )
 
 
 class PostLike(View):
-    
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse("post_detail", args=[slug]))
 
 
 @login_required()
@@ -96,44 +89,39 @@ def add_product(request):
             instance.author = request.user
             instance.save()
             messages.info(request, "The post have been created")
-            return redirect('home')
+            return redirect("home")
     else:
         form = PostForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'add_product.html', context)
+    context = {"form": form}
+    return render(request, "add_product.html", context)
 
 
 @login_required()
 def delete_product(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
-    if request.method == 'POST':
+    if request.method == "POST":
         post.delete()
         messages.info(request, "The post have been deleted")
-        return redirect('home')
+        return redirect("home")
     context = {
-        'post': post,
+        "post": post,
     }
-    return render(request, 'delete_product.html', context)   
+    return render(request, "delete_product.html", context)
 
 
 @login_required()
 def update_product(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = UpdateForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
             messages.info(request, "The post have been updated")
-            return redirect('home')
+            return redirect("home")
     else:
         form = UpdateForm(instance=post)
-    context = {
-        'post': post,
-        'form': form
-    }
-    return render(request, 'update_product.html', context)
+    context = {"post": post, "form": form}
+    return render(request, "update_product.html", context)
 
 
 def signup(request):
@@ -149,12 +137,9 @@ def signup(request):
             if new_user is not None:
                 login(request, new_user)
                 return redirect("home")
-   
-    context = {
-     "form": form
-    }
+    context = {"form": form}
     return render(request, "account/signup.html", context)
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, "about.html")
