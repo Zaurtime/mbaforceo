@@ -140,4 +140,118 @@ superuser they have access to the buttons for deleting or updating comments.
 
 * On the Logout Page, users can confirm that they wish to exit the website.
 
+### Like Post
+
+![Like Post](.)
+* When users are logged in to the website they can like a post <br>
+
+### Unlike Post
+
+![Unlike Post](.)
+
+* When users are logged in to the website they can unlike a post that has been liked by the user.<br>
+
+### Comment Post
+
+![Comment Post](.)
+
+* When users are logged in to the website they can comment on a post and after they submit the comment they will see a 
+  message at the top of the page saying "Your comment is awaiting approval".<br>
+
+### Add MBA course
+
+![Add MBA course](.)  
+
+* When users are logged in to the website they can publish a post with a favourite MBA program and after they submit the 
+post they will see a message at the top of the page saying "Your post have been created".<br>
+
+### Update Post
+
+![Update Post](.)  
+* When users are logged in to the website they can edit their own previously published posts and they will see the message 
+  "The post have been updated" after pressing the Submit button.<br>
+
+### Delete Post 1 
+
+![Delete Post 1](.)
+When users are logged in to the website and they wish to delete their posts, they can press the button Delete and a 
+Bootstrap box model will pop up with the message Delete Course Post "Are you sure you want to delete this post?".<br>  
+
+### Delete Post 2 2
+
+![Delete Post 2](.)  
+
+* After pressing the Delete button again inside the Bootstrap box model they will see a message on the 
+  top of the page, "The Post have been deleted".<br>
+
+## Admin Panel/Superuser
+![No Search Found](.)
+
+* On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and
+delete the following ones:
+1. Posts
+2. Comments
+3. Author
+5. Likes
+
+   
+*As admin/superuser I can also approve comments, approve posts and change the status and give other permissions to the users.<br>
+
+## Technologies Used
+
+### Languages Used
+
+* [HTML 5](https://en.wikipedia.org/wiki/HTML/)
+* [CSS 3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://www.javascript.com/)
+* [Django](https://www.python.org/)
+* [Python](https://www.djangoproject.com/)
+
+#### Django Packages
+
+* [Gunicorn](https://gunicorn.org/)<br>
+   As the server for Heroku
+* [Cloudinary](https://cloudinary.com/)<br>
+   Was used to host the static files and media
+* [Dj_database_url](https://pypi.org/project/dj-database-url/)<br>
+   To parse the database URL from the environment variables in Heroku
+* [Psycopg2](https://pypi.org/project/psycopg2/)<br>
+   As an adaptor for Python and PostgreSQL databases
+* [Summernote](https://summernote.org/)<br>
+   As a text editor
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)<br>
+   For authentication, registration, account
+   management
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)<br>
+   To style the forms
+
+### Frameworks - Libraries - Programs Used
+
+* [Bootstrap5](https://getbootstrap.com/)<br>
+   Was used to style the website, add responsiveness and interactivity
+* [Jquery](https://jquery.com/)<br>
+   All the scripts were written using jquery library
+* [Git](https://git-scm.com/)<br>
+   Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
+* [GitHub](https://github.com/)<br>
+   GitHub is used to store the project's code after being pushed from Git
+* [Heroku](https://id.heroku.com)<br>
+   Heroku was used to deploy the live project
+* [PostgreSQL](https://www.postgresql.org/)<br>
+   Database used through heroku.
+* [Lucidchart](https://lucid.app/)<br>
+   Lucidchart was used to create the database diagram
+* [PEP8](http://pep8online.com/)<br>
+   PEP8 was used to validate all the Python code
+* [W3C - HTML](https://validator.w3.org/)<br>
+   W3C- HTML was used to validate all the HTML code
+* [W3C - CSS](https://jigsaw.w3.org/css-validator/)<br>
+   W3C - CSS was used to validate the CSS code
+* [Fontawesome](https://fontawesome.com/)<br>
+   To add icons to the website
+* [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)<br>
+   To check App responsiveness and debugging
+* [Coolors](https://coolors.co/)<br>
+   To build the colour palette of the project
+
 
